@@ -1,5 +1,3 @@
-package Seminar01;
-
 public class Animal { // extends Object - наследуется от класса Object
    private String phylum;
    private int age;
