@@ -10,8 +10,8 @@ public class Animal { // extends Object - наследуется от класс
     * то будет ошибка и конструктор по умолчанию не сработает. В таком случае его
     * следует прописать здесь явно:
     */
-   // public Animal() {
-   // }
+   public Animal() {
+   }
 
    // Это созданный конструктор с двумя параметрами
    public Animal(String phylum, int age) {
@@ -24,9 +24,6 @@ public class Animal { // extends Object - наследуется от класс
       // ArrayList<Integer> list = new ArrayList<>();
       // Можно присваивать им значение. Но такие действия не оправданы и неуклюжи
       // list.add(getAge());
-   }
-
-   public Animal() {
    }
 
    // Это созданный конструктор с одним параметром
@@ -53,15 +50,13 @@ public class Animal { // extends Object - наследуется от класс
       this.age = age;
    }
 
+   public void voice() {
+      System.out.println("Animal " + phylum + " says: У-у-у");
+   }
+
    @Override
    public String toString() {
       return "Animal [phylum=" + phylum + ", age=" + age + "]";
    }
 
 }
-
-/*
- * Абстракция
- * Инкапсуляция
- * Наследование
- */
