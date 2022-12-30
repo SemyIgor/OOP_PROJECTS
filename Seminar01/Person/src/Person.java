@@ -21,7 +21,11 @@ public class Person {
    }
 
    public void appendToFamily(Person person) {
-      family.add(person);
+      if (person != null && person != this) { // Исключаем появление в семье пустого человека
+                                              // и добавление в свою семью самого себя (защита рекурсии
+                                              // в методе viewFamily)
+         family.add(person);
+      }
    }
 
    @Override
