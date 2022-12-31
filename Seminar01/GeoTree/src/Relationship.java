@@ -1,4 +1,10 @@
 public enum Relationship {
     parent,
-    children
+    child,
+    sister,
+    brother,
+    husband,
+    wife,
+    sibling,
+    cousin
 }
