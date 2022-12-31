@@ -25,16 +25,6 @@ public class Main {
         gt.appendCousin(masha, jane);
         gt.appendCousin(masha, ivan);
 
-        // for (Node node : gt.getTree()) {
-        // System.out.println(node);
-        // }
-        // gt.append(vasya, jane);
-        // gt.append(vasya, ivan);
-
-        // System.out.println(irina);
-        // System.out.println(vasya);
-        // System.out.println(masha);
-
         // View all irina's children
         System.out.println(new Reserch(gt).spend(irina,
                 Relationship.parent));
