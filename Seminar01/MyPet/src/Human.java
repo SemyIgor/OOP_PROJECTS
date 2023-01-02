@@ -45,8 +45,9 @@ public class Human {
    public void playWithPet(Pet pet) {
       if (pet.petCanPlay(this)) {
          System.out.println("Бобик играет");
+      } else {
+         System.out.println("Бобик не хочет играть");
       }
-      // System.out.println("Бобик=" + pet);
    }
 
    @Override

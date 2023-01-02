@@ -10,6 +10,8 @@ public class Main {
       System.out.println(bobDilan);
       System.out.println(bobic);
 
+      bobDilan.playWithPet(bobic);
+
       // bobDilan has got some meal and he is trying to feed the pet
       bobDilan.feedPet();
       // System.out.println(bobic);
