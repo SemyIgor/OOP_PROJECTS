@@ -1,10 +1,15 @@
 public abstract class Pet {
-   public String name;
-   public boolean isHungry;
-   public boolean isTired;
-   public boolean isSleeping;
-   public boolean moodToPlay;
-   public Human human;
+   private String name;
+   private boolean isHungry;
+   private boolean moodToPlay;
+   private Human human;
+
+   public Pet(String name, boolean isHungry, boolean moodToPlay, Human human) {
+      this.name = name;
+      this.isHungry = isHungry;
+      this.moodToPlay = moodToPlay;
+      this.human = human;
+   }
 
    public String getName() {
       return name;
@@ -20,22 +25,6 @@ public abstract class Pet {
 
    public void setHungry(boolean isHungry) {
       this.isHungry = isHungry;
-   }
-
-   public boolean isTired() {
-      return isTired;
-   }
-
-   public void setTired(boolean isTired) {
-      this.isTired = isTired;
-   }
-
-   public boolean isSleeping() {
-      return isSleeping;
-   }
-
-   public void setSleeping(boolean isSleeping) {
-      this.isSleeping = isSleeping;
    }
 
    public boolean isMoodToPlay() {
@@ -54,47 +43,11 @@ public abstract class Pet {
       this.human = human;
    }
 
-   public void growl() {
-      System.out.println("Бобик рычит");
-   }
-
-   public void whine() {
-      System.out.println("Бобик скулит");
-   }
-
-   public void sniffle() {
-      System.out.println("Бобик фыркает");
-   }
-
-   public void runAway() {
-      System.out.println("Бобик убегает");
-   }
-
-   public boolean petCanPlay(Human human) {
-      if (human.isHasToy()) {
-         if (this.isHungry) {
-            this.growl();
-            return false;
-         } else if (this.isTired) {
-            this.whine();
-            return false;
-         } else if (this.isSleeping) {
-            this.sniffle();
-            return false;
-         } else {
-            this.moodToPlay = true;
-            return true;
-         }
-      } else {
-         this.runAway();
-         return false;
-      }
-   }
+   abstract boolean petCanPlay(Human human);
 
    @Override
    public String toString() {
-      return "Pet [name=" + name + ", isHungry=" + isHungry + ", isTired=" + isTired + ", isSleeping=" + isSleeping
-            + ", moodToPlay=" + moodToPlay + "]";
+      return "Pet [name=" + name + ", isHungry=" + isHungry + ", moodToPlay=" + moodToPlay + ", human=" + human + "]";
    }
 
 }

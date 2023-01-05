@@ -36,17 +36,18 @@ public class Human {
       if (this.isHasMeal()) {
          this.getPet().setHungry(false);
          this.hasMeal = false;
-         System.out.println("Бобик наелся");
+         System.out.printf("%s наелся\n", this.getPet().getName());
       } else {
-         this.getPet().growl();
+         System.out.printf("%s недоволен\n", this.getPet().getName());
+         // this.getPet().agressiveSound();
       }
    }
 
    public void playWithPet(Pet pet) {
       if (pet.petCanPlay(this)) {
-         System.out.println("Бобик играет");
+         System.out.printf("%s играет\n", pet.getName());
       } else {
-         System.out.println("Бобик не хочет играть");
+         System.out.printf("%s не хочет играть\n", pet.getName());
       }
    }
 

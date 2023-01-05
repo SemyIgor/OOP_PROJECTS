@@ -1,20 +1,66 @@
-public class Dog extends Pet {
-   // public String name;
-   // public boolean isHungry;
-   // public boolean isTired;
-   // public boolean isSleeping;
-   // public boolean moodToPlay;
-   // public Human human;
+public class Dog extends Pet implements PetVoice {
+   public boolean isTired;
 
-   public Dog(String name, boolean isHungry, boolean isTired, boolean isSleeping) {
-      super.name = name;
-      super.isHungry = isHungry;
-      super.isTired = isTired;
-      super.isSleeping = isSleeping;
-      if (super.isHungry == false && super.isTired == false && super.isSleeping == false) {
-         super.moodToPlay = true;
+   public Dog(String name, boolean isHungry, boolean moodToPlay, Human human, boolean isTired) {
+      super(name, isHungry, moodToPlay, human);
+      this.isTired = isTired;
+   }
+
+   public boolean isTired() {
+      return isTired;
+   }
+
+   public void setTired(boolean isTired) {
+      this.isTired = isTired;
+   }
+
+   @Override
+   public void go() {
+      System.out.printf("%s убежал\n", super.getName());
+   }
+
+   @Override
+   public void eat() {
+      System.out.println("Собака поела");
+   }
+
+   @Override
+   public void play() {
+      System.out.println("Собака играет");
+   }
+
+   @Override
+   public void pleasureSound() {
+      System.out.println("Собака радостно лает");
+   }
+
+   @Override
+   public void unPleasureSound() {
+      System.out.println("Собака скулит");
+   }
+
+   @Override
+   public void agressiveSound() {
+      System.out.println("Собака рычит");
+   }
+
+   @Override
+   boolean petCanPlay(Human human) {
+      if (human.isHasToy()) {
+         if (super.isHungry()) {
+            this.agressiveSound();
+            return false;
+         } else if (this.isTired) {
+            this.unPleasureSound();
+            return false;
+         } else {
+            super.setMoodToPlay(true);
+            return true;
+         }
       } else {
-         super.moodToPlay = false;
+         this.go();
+         return false;
       }
    }
+
 }
