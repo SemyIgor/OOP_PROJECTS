@@ -39,6 +39,9 @@ public class Main {
             // View all vasya's parents
             System.out.println(new Reserch(gt).parents(vasya,
                         Relationship.child));
+
+            gt.saveToCSVFile(gt);
+
       }
 
 }
