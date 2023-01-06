@@ -24,8 +24,11 @@ public class GeoTree implements Savable {
       try (FileWriter fw = new FileWriter("file.csv", false)) {
          for (Node node : tree.getTree()) {
             fw.write(node.p1.toString());
+            fw.append(' ');
             fw.write(node.re.toString());
+            fw.append(' ');
             fw.write(node.p2.toString());
+            fw.append(',');
             fw.flush();
          }
       } catch (IOException e) {
