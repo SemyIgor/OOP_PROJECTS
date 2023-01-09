@@ -1,18 +1,22 @@
-## Getting Started
+## Домашнее задание к Семинару №3, проект MyPet
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Были внесены следующие изменения к проекту MyPet из домашнего задания к семинару №2
+1. Закомментированы строки в классе Main(), описывающие взаимодействие между животными и людьми 
+2. Добавлены два класса компараторов: 
+   - компаратор по весу животных (PetWeightComparator);
+   - компаратор по возрасту животных (PetAgeComparator).
+3. В классе Main() выведены списки животных в сравнении до сортировки и после сортировки.
 
-## Folder Structure
+`
+`
+`
 
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+`Полезная штука`
+``` java
+Iterator<Pet> iterator = playGroundPets.iterator();
+while (iterator.hasNext()) {
+   Pet next = iterator.next();
+   System.out.println(next); // If we've overrided toString() for Pet Class
+   // System.out.println(next.toString()); // If we've not overrided toString() for Pet Class
+}
+```

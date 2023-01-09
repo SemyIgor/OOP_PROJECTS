@@ -3,12 +3,16 @@ public abstract class Pet {
    private boolean isHungry;
    private boolean moodToPlay;
    private Human human;
+   private int weight;
+   private int age;
 
-   public Pet(String name, boolean isHungry, boolean moodToPlay, Human human) {
+   public Pet(String name, boolean isHungry, boolean moodToPlay, Human human, int weight, int age) {
       this.name = name;
       this.isHungry = isHungry;
       this.moodToPlay = moodToPlay;
       this.human = human;
+      this.weight = weight;
+      this.age = age;
    }
 
    public String getName() {
@@ -41,6 +45,22 @@ public abstract class Pet {
 
    public void setHuman(Human human) {
       this.human = human;
+   }
+
+   public int getWeight() {
+      return weight;
+   }
+
+   public void setWeight(int weight) {
+      this.weight = weight;
+   }
+
+   public int getAge() {
+      return age;
+   }
+
+   public void setAge(int age) {
+      this.age = age;
    }
 
    abstract boolean petCanPlay(Human human);

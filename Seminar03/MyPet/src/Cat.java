@@ -1,8 +1,8 @@
 public class Cat extends Pet implements PetVoice {
    public boolean isSleeping;
 
-   public Cat(String name, boolean isHungry, boolean moodToPlay, Human human, boolean isSleeping) {
-      super(name, isHungry, moodToPlay, human);
+   public Cat(String name, boolean isHungry, boolean moodToPlay, Human human, boolean isSleeping, int weight, int age) {
+      super(name, isHungry, moodToPlay, human, weight, age);
       this.isSleeping = isSleeping;
    }
 
