@@ -1,4 +1,4 @@
-public class Person {
+public class Person implements Comparable<Person> {
    private String fullName;
    private int age;
    private String sex;
@@ -21,9 +21,24 @@ public class Person {
       return sex;
    }
 
+   public void whoIsOlder(Person otherPerson) {
+      if (compareTo(otherPerson) < 0) {
+         System.out.printf("\n%s младше, чем %s\n", this.fullName, otherPerson.fullName);
+      } else if (compareTo(otherPerson) == 0) {
+         System.out.printf("\n%s и %s ровестники\n", this.fullName, otherPerson.fullName);
+      } else {
+         System.out.printf("\n%s старше, чем %s\n", this.fullName, otherPerson.fullName);
+      }
+   }
+
    @Override
    public String toString() {
       return "[" + fullName + ", " + age + ", " + sex + "]";
+   }
+
+   @Override
+   public int compareTo(Person otherPerson) {
+      return Integer.compare(getAge(), otherPerson.getAge());
    }
 
 }

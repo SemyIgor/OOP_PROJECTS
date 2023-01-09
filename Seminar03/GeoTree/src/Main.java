@@ -6,7 +6,7 @@ public class Main {
       Person masha = new Person("Хрусталёва Мария Дмитриевна", 12, "female");
       Person helen = new Person("Селезнёва Елена Васильевна", 32, "female");
       Person jane = new Person("Селезнёва Евгения Сергеевна", 15, "female");
-      Person ivan = new Person("Селезнёв Иван Владимирович", 13, "male");
+      Person ivan = new Person("Селезнёв Иван Владимирович", 14, "male");
 
       GeoTree gt = new GeoTree();
 
@@ -40,7 +40,12 @@ public class Main {
       System.out.println(new Reserch(gt).parents(vasya, Relationship.child));
 
       gt.saveToCSVFile(gt);
-      gt.saveToJSONFile(gt);
+      // gt.saveToJSONFile(gt);
+
+      // Using Comparable
+      masha.whoIsOlder(vasya);
+      vasya.whoIsOlder(ivan);
+      irina.whoIsOlder(helen);
 
    }
 
