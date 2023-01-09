@@ -1,18 +1,5 @@
-## Getting Started
+## Seminar03 GeoTree project
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
-
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+К классу Person применен интерфейс Comparable для сравнения людей по возрасту.
+Для обработки результатов сравнения добавлен метод whoIsOlder(Person) класса Person.
+В методе Main() добавлен вызов сравнения младшего со старшим, ровесников и старшего с младшим Person.
