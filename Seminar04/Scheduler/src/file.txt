@@ -1,0 +1,32 @@
+2
+Петров В.И.
+Покрасить ворота
+Покрасить ворота красной краской
+2
+14-JANUARY-2023
+25-FEBRUARY-2023
+,
+3
+Sergeev N.I.1
+Repair car
+Fix the problem with the fuel supply
+2
+14-JANUARY-2023
+14-JANUARY-2023
+,
+1
+Иванов И.И.
+Покрасить забор
+Покрасить забор зелёной краской
+1
+14-JANUARY-2023
+22-FEBRUARY-2023
+,
+1
+Grigoriev S.V.
+Clean windows
+To clean all windows in the office
+2
+14-JANUARY-2023
+16-JANUARY-2023
+,
