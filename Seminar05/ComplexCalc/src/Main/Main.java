@@ -16,7 +16,8 @@ public class Main {
       fh.setFormatter(sFormat);
 
       logger.log(Level.INFO, "Запускаем программу");
-
       new Controller().start();
+      logger.log(Level.INFO, "Завершаем работу программы");
+
    }
 }
