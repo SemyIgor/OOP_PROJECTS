@@ -2,8 +2,6 @@ package View;
 
 import java.util.Scanner;
 
-// import Models.User;
-
 public class MainView {
 
    public void show() {
@@ -22,7 +20,7 @@ public class MainView {
       return choice;
    }
 
-   public int showUserMenu() {
+   public int showClientMenu() {
       System.out.println("1 - Подать заявку на фильм");
       System.out.println("2 - Вернуть фильм");
 

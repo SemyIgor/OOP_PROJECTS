@@ -23,16 +23,16 @@ public class NetflixController {
       String name = view.authorize();
       if (isAdmin(name)) {
          adminMenu();
-      } else if (isUser(name)) {
-         userMenu();
+      } else if (isClient(name)) {
+         clientMenu();
       } else {
          System.out.println("В базе нет такого пользователя");
       }
    }
 
-   private void userMenu() {
-      var num = view.showUserMenu();
-      var ctrl = new UserController(user, new RentService());
+   private void clientMenu() {
+      var num = view.showClientMenu();
+      var ctrl = new ClientController(user, new RentService());
       ctrl.run(num);
    }
 
@@ -53,7 +53,7 @@ public class NetflixController {
       return false;
    }
 
-   private boolean isUser(String name) {
+   private boolean isClient(String name) {
       var list = getUsers();
       for (User user : list) {
          if (user.getName().equals(name)) {

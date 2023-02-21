@@ -6,14 +6,14 @@ import Service.IFilmService;
 import Service.IRentService;
 import View.UserView;
 
-public class UserController {
+public class ClientController {
 
    private User user;
    private IRentService rentService;
    // private IFilmService filmService;
    private UserView userView;
 
-   public UserController(User user, IRentService rentService) {
+   public ClientController(User user, IRentService rentService) {
       this.user = user;
       this.rentService = rentService;
       userView = new UserView();
