@@ -1,10 +1,10 @@
-янв. 29, 2023 8:52:10 PM Main.Main main
+янв. 29, 2023 11:08:46 PM Main.Main main
 INFO: Запускаем программу
-янв. 29, 2023 8:52:10 PM Control.Controller start
+янв. 29, 2023 11:08:46 PM Control.Controller start
 INFO: Запущен контроллер
-янв. 29, 2023 8:52:15 PM MVC.Model printTestLine
-INFO: Приступили к операции сложения
-янв. 29, 2023 8:52:22 PM MVC.Model printTestLine
-INFO: Выполнена операция сложения
-янв. 29, 2023 8:52:27 PM Main.Main main
+янв. 29, 2023 11:08:53 PM MVC.Model printTestLine
+INFO: Приступили к операции деления
+янв. 29, 2023 11:09:16 PM MVC.Model printTestLine
+INFO: Выполнена операция деления
+янв. 29, 2023 11:09:33 PM Main.Main main
 INFO: Завершаем работу программы
