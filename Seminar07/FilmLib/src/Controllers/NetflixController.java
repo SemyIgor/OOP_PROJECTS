@@ -23,8 +23,10 @@ public class NetflixController {
       String name = view.authorize();
       if (isAdmin(name)) {
          adminMenu();
-      } else {
+      } else if (isUser(name)) {
          userMenu();
+      } else {
+         System.out.println("В базе нет такого пользователя");
       }
    }
 
@@ -36,6 +38,7 @@ public class NetflixController {
 
    private void adminMenu() {
       var num = view.showAdminMenu();
+      // ДОДЕЛАТЬ !!!
    }
 
    private boolean isAdmin(String name) {
@@ -46,7 +49,19 @@ public class NetflixController {
             return user.getRole().equals(Role.admin);
          }
       }
-      // throw new NullPointerException(s: "Пользователь не найден");
+      // System.out.println("Это не админ");
+      return false;
+   }
+
+   private boolean isUser(String name) {
+      var list = getUsers();
+      for (User user : list) {
+         if (user.getName().equals(name)) {
+            this.user = user;
+            return user.getRole().equals(Role.user);
+         }
+      }
+      // System.out.println("Это не клиент");
       return false;
    }
 
